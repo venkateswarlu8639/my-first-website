@@ -12,7 +12,7 @@ This is a simple Student Portal website created as a beginner web development pr
 - CSS
 
 ## 🌐 Live Website
-https://github.com/venkateswarlu8639/my-first-website.git
+https://venkateswarlu8639.github.io/my-first-website/
 
 ## 📚 Project Purpose
 This project was built to practice basic web development concepts and improve my skills in HTML and CSS.
