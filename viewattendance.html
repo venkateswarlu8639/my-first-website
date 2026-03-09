@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Attendance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Student Attendance Records</h2>
+
+<button onclick="loadAttendance()">Show Attendance</button>
+
+<table border="1" id="table">
+<tr>
+<th>Student</th>
+<th>Subject</th>
+<th>Attendance %</th>
+</tr>
+</table>
+
+<script>
+function loadAttendance(){
+
+fetch('/getAttendance')
+.then(res => res.json())
+.then(data => {
+
+let table = document.getElementById("table");
+
+data.forEach(item => {
+
+let row = table.insertRow();
+
+row.insertCell(0).innerText = item.student;
+row.insertCell(1).innerText = item.subject;
+row.insertCell(2).innerText = item.attendance;
+
+});
+
+});
+
+}
+</script>
+
+</body>
+</html>
